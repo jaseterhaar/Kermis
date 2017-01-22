@@ -60,34 +60,34 @@ public class Kassa {
 		keuze = invoer.nextLine().toLowerCase();
 		switch(keuze){
 		case "1":
-			Kassa.kermisArray[0].gaNaarOnderdeel(0);
+			gaNaarOnderdeel(0);
 			break;
 		case "2":
-			Kassa.kermisArray[1].gaNaarOnderdeel(1);
+			gaNaarOnderdeel(1);
 			break;
 		case "3":
-			Kassa.kermisArray[2].gaNaarOnderdeel(2);
+			gaNaarOnderdeel(2);
 			break;
 		case "4":
-			Kassa.kermisArray[3].gaNaarOnderdeel(3);
+			gaNaarOnderdeel(3);
 			break;
 		case "5":
-			Kassa.kermisArray[4].gaNaarOnderdeel(4);
+			gaNaarOnderdeel(4);
 			break;
 		case "6":
-			Kassa.kermisArray[5].gaNaarOnderdeel(5);
+			gaNaarOnderdeel(5);
 			break;
 		case "11":
-			Kassa.kermisArray[6].gaNaarOnderdeel(6);
+			gaNaarOnderdeel(6);
 			break;
 		case "22":
-			Kassa.kermisArray[7].gaNaarOnderdeel(7);
+			gaNaarOnderdeel(7);
 			break;
 		case "33":
-			Kassa.kermisArray[8].gaNaarOnderdeel(8);
+			gaNaarOnderdeel(8);
 			break;
 		case "44":
-			Kassa.kermisArray[9].gaNaarOnderdeel(9);
+			gaNaarOnderdeel(9);
 			break;
 		case "v":
 			getAantalVerkopen();
@@ -106,9 +106,16 @@ public class Kassa {
 		}
 	}
 	
+	//Gebruik maken van attractie
+	public void gaNaarOnderdeel(int attractieNr){
+		System.out.println(kermisArray[attractieNr].getErvaring());
+		kermisArray[attractieNr].setAantalVerkocht();
+		System.out.println("Druk op een toets om verder te gaan...");
+		invoer.nextLine();
+	}
+	
 	//Weergeven van de actuele tarieven
 	void getPrijsLijst(){
-		double totaalOmzet = 0;
 		System.out.println("-------------------------");
 		System.out.println("Attracties");
 		System.out.println("-------------------------");

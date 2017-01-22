@@ -6,14 +6,6 @@ public abstract class Attractie implements Chargeable{
 	private double prijs;
 	private int aantalVerkocht;
 	
-	//Gebruik maken van attractie
-	public void gaNaarOnderdeel(int attractieNr){
-		System.out.println(Kassa.kermisArray[attractieNr].getErvaring());
-		Kassa.kermisArray[attractieNr].setAantalVerkocht();
-		System.out.println("Druk op een toets om verder te gaan...");
-		String doorgaan = Kassa.invoer.nextLine();
-	}
-	
 	//Berekenen van de omzet van een attractie
 	public double getOmzet(int attractieNr){
 		double omzet = Kassa.kermisArray[attractieNr].getPrijs() * Kassa.kermisArray[attractieNr].getAantalVerkocht();

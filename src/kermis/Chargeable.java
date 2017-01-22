@@ -1,7 +1,6 @@
 package kermis;
 
 public interface Chargeable {
-	void gaNaarOnderdeel(int onderdeelNr);
 	
 	double getOmzet(int onderdeelNr);
 	

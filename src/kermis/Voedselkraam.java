@@ -5,14 +5,6 @@ public class Voedselkraam implements Chargeable{
 	private String ervaring;
 	private double prijs;
 	private int aantalVerkocht;
-	
-	//Kermisonderdeel bezoeken
-	public void gaNaarOnderdeel(int kermisNr){
-		System.out.println(Kassa.kermisArray[kermisNr].getErvaring());
-		Kassa.kermisArray[kermisNr].setAantalVerkocht();
-		System.out.println("Druk op een toets om verder te gaan...");
-		String doorgaan = Kassa.invoer.nextLine();
-	}
 
 	//Rekenen van de omzet per kermisonderdeel
 	public double getOmzet(int kermisNr){
